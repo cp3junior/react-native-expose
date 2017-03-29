@@ -1,0 +1,20 @@
+{
+  "name": "Expose",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "native-base": "^2.1.0",
+    "react": "15.4.2",
+    "react-base": "^0.2.0",
+    "react-native": "0.42.0",
+    "react-native-navigation": "next",
+    "react-native-vector-icons": "^4.0.0",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "eslint-config-rallycoding": "^3.2.0"
+  }
+}
