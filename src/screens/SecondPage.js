@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { 
   Container,
   Button,
-  Text,
   Header,
   Left, 
   Body, 
@@ -12,8 +11,16 @@ import {
   Content, 
   Footer, 
   FooterTab, 
-  Form, Item, Label, Input, ListItem
+  Form, Item, Label, Input
   } from 'native-base';
+  // import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Image
+} from 'react-native';
 
 export default class SecondPage extends Component {
   static navigatorStyle = {
@@ -24,87 +31,45 @@ export default class SecondPage extends Component {
   constructor(props) {
     super(props);
   
-    this.state = { test: 'Second Page' };
+    this.state = { test: 'First Page' };
   }
 
   render() {
     return (
-      <Container>
-          <Header>
-              <Left>
-                  <Button transparent >
-                      <Icon name='arrow-back' />
-                  </Button>
-              </Left>
-              <Body>
-                  <Title>{ this.state.test }</Title>
-              </Body>
-              <Right />
-          </Header>
+      <ScrollView style={styles.container}>
+        <Image style={{width: undefined, height: 100}} source={require('./../img/colors.png')} />
 
-          <Content>
-              <Text>Content Goes here!</Text>
-              <Form>
-                            <Item floatingLabel>
-                                <Label>Username</Label>
-                                <Input />
-                            </Item>
-                            <Item floatingLabel last>
-                                <Label>Password</Label>
-                                <Input />
-                            </Item>
-                        </Form>
-                        <ListItem>
-                        <Text>Simon Mignolet</Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text>Nathaniel Clyne</Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text>Dejan Lovren</Text>
-                    </ListItem>
-                    <ListItem itemHeader first>
-                        <Text>COMEDY</Text>
-                    </ListItem>
-                    <ListItem >
-                        <Text>Hangover</Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text>Horrible Bosses</Text>
-                    </ListItem>
-                    <ListItem last>
-                        <Text>Conjuring</Text>
-                    </ListItem>
-                    <ListItem itemHeader>
-                        <Text>ACTION</Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text>Terminator Genesis</Text>
-                    </ListItem>
-          </Content>
-
-          <Footer>
-              <FooterTab>
-                  <Button>
-                      <Icon name="apps" />
-                      <Text>Apps</Text>
-                  </Button>
-                  <Button>
-                      <Icon name="camera" />
-                      <Text>Camera</Text>
-                  </Button>
-                  <Button active> 
-                      <Icon active name="navigate" />
-                      <Text>Navigate</Text>
-                  </Button>
-                  <Button>
-                      <Icon name="person" />
-                      <Text>Contact</Text>
-                  </Button>
-              </FooterTab>
-          </Footer>
-      </Container>
+        <View >
+           <Text style={styles.welcome}>
+             SecondPage
+           </Text>
+           <Text style={styles.instructions}>
+             To get started, edit index.ios.js
+           </Text>
+           <Text style={styles.instructions}>
+             Press Cmd+R to reload,{'\n'}
+             Cmd+D or shake for dev menu
+           </Text>
+         </View>
+         </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
 

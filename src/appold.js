@@ -1,3 +1,27 @@
+'use strict';
+
+import React, { Component } from 'react';
+
+import {
+  StyleSheet,
+  View,
+} from 'react-native';
+
+class appold extends Component {
+  render() {
+    return (
+      <View />
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+
+});
+
+
+export default appold;
+
 // import React, { Component } from 'react';
 // import { Navigation } from 'react-native-navigation';
 // import { 
@@ -137,7 +161,8 @@ export default class App extends Component {
     this.startApp();
   }
   componentWillMount() {
-     getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
+     // getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
+     getImageSource('md-arrow-back', 30).then((source) => this.setState({ userIcon: source }));
      console.log(this.state.userIcon);
    }
 
