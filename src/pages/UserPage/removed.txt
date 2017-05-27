@@ -1,0 +1,38 @@
+
+ <IconButton 
+                          onPress={this.iconButtonPressed.bind(this, 0)}
+                          name="Items Sold" 
+                          badge={1}
+                          image={require('./../img/icons/shop.png')}
+                          colorGrad={['#1FA2FF', '#12D8FA', '#A6FFCB']} 
+                        />
+
+
+
+
+<View>
+                        <Text style={separatorText} >Manage Shop</Text>
+                    </View>
+                    <View style={settingContainer}>
+                        <SettingList name="Sell Product" color="#2ecc71" icon="plus-circle" onPress={() => this.refs.modal6.open()} />
+                        <SettingList name="Modify Product" icon="pencil" color="#0099ff" />
+                        <SettingList name="Delete Product" icon="eraser" color="#ff2828" />
+                        <SettingList name="My Shop" icon="shopping" color="#f1c40f" />
+                        <SettingList name="Confirm Shipping" style={{ borderBottomWidth: 0 }} icon="check-all" color="#e67e22" />
+                    </View>
+
+
+
+
+                    //userpage
+                      <SettingList name="Rating and Suggestions" icon="star" color="#f39c12" />
+                        <SettingList name="Share this App" style={{ borderBottomWidth: 0 }} icon="share-variant" color="#1abc9c" />
+
+
+
+//homepage
+
+<View style={rowPayStyle}>
+            <Image style={imagePayStyle} source={require('./../img/slides/pay2.jpg')} />
+            <Image style={imagePayStyle} source={require('./../img/slides/pay1.jpg')} />
+          </View>

@@ -1,0 +1,18 @@
+rootProject.name = 'react_native_navigation_bootstrap'
+include ':rn-alipay'
+project(':rn-alipay').projectDir = new File(rootProject.projectDir, '../node_modules/rn-alipay/android')
+include ':react-native-wechat'
+project(':react-native-wechat').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-wechat/android')
+include ':react-native-interactable'
+project(':react-native-interactable').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-interactable/android')
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/android/app')
+
+include ':app'
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/android/app/')
+
